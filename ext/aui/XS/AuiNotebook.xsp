@@ -120,4 +120,8 @@ wxAuiNotebook::new( ... )
 #endif
 
     void SetUniformBitmapSize( const wxSize& size );
+
+    wxString SavePerspective();
+    void LoadPerspective( const wxString& perspective );
+
 };
