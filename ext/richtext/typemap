@@ -47,3 +47,4 @@ wxRichTextHeaderFooterData * O_WXOBJECT_THR
 wxRichTextOddEvenPage   T_ENUM
 wxRichTextPageLocation  T_ENUM
 
+wxCommandProcessor *    O_WXOBJECT_THR

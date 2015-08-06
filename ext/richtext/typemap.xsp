@@ -84,3 +84,10 @@
 %typemap{const wxRichTextHeaderFooterData&}{reference};
 
 %typemap{wxRect&}{reference};
+
+%typemap{wxCommandProcessor*}{simple};
+%typemap{wxCommandProcessorDisown*}{parsed}
+{
+    %cpp_type{%wxCommandProcessor*%};
+    %cleanup_code{%wxPli_object_set_deleteable( aTHX_ $PerlVar, false )%};
+};

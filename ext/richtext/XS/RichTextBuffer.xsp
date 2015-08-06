@@ -127,6 +127,11 @@ wxRichTextBuffer::SetStyle( ... )
     bool EndURL();
 #endif
 #if WXPERL_W_VERSION_GE( 2, 7, 2 )
+    virtual bool SetListStyle(const wxRichTextRange& range,
+                              const wxString& defName,
+                              int flags = wxRICHTEXT_SETSTYLE_WITH_UNDO,
+                              int startFrom = 1,
+                              int specifiedLevel = -1);
     bool ClearListStyle( const wxRichTextRange& range,
                          int flags = wxRICHTEXT_SETSTYLE_WITH_UNDO );
 #endif
@@ -140,6 +145,8 @@ wxRichTextBuffer::SetStyle( ... )
     bool BeginSuppressUndo();
     bool EndSuppressUndo();
     bool SuppressingUndo() const;
+
+    wxCommandProcessorDisown* GetCommandProcessor();
 
     void SetStyleSheet( wxRichTextStyleSheet* styleSheet );
     wxRichTextStyleSheetDisown* GetStyleSheet() const;
