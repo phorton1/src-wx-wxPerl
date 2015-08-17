@@ -427,3 +427,14 @@ wxFont::SetUnderlined( underlined )
 void
 wxFont::SetWeight( weight )
     int weight
+
+
+wxFont *
+wxFont::Scaled( scale )
+    float scale
+  CODE:
+    wxFont aFont = THIS->Scaled(scale);
+    RETVAL = new wxFont(aFont);
+  OUTPUT:
+    RETVAL
+
