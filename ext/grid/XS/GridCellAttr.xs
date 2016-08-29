@@ -53,6 +53,14 @@ void
 wxGridCellAttr::SetAlignment( hAlign, vAlign )
     int hAlign
     int vAlign
+    
+## PRH
+
+void
+wxGridCellAttr::SetSize( rows, columns )
+    int rows
+    int columns
+
 
 void
 wxGridCellAttr::SetReadOnly( isReadOnly = true )

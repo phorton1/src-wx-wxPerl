@@ -136,6 +136,7 @@ void
 wxGrid::AutoSizeColLabelSize( col )
     int col
 
+
 void
 wxGrid::AutoSizeRowLabelSize( col )
     int col
@@ -188,6 +189,18 @@ wxGrid::CanDragGridSize()
 
 bool
 wxGrid::CanEnableCellControl()
+
+
+## PRH ADDITION
+wxGridCellCoords*
+wxGrid::XYToCell( x, y )
+    int x
+    int y
+  CODE:
+    RETVAL = new wxGridCellCoords( THIS->XYToCell( x, y ) );
+  OUTPUT:
+    RETVAL
+
 
 wxRect*
 wxGrid::CellToRectXY( row, col )
@@ -272,6 +285,7 @@ wxGrid::EnableDragGridSize( enable = true )
 void
 wxGrid::EnableDragRowSize( enable = true )
     bool enable
+
 
 void
 wxGrid::EnableEditing( enable = true )
