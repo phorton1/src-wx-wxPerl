@@ -19,6 +19,7 @@ wxDataFormatId          T_ENUM
 wxDataObject *          O_NON_WXOBJECT_THR
 wxFileDataObject *      O_NON_WXOBJECT_THR
 wxTextDataObject *      O_NON_WXOBJECT_THR
+wxHTMLDataObject *      O_NON_WXOBJECT_THR
 wxBitmapDataObject *    O_NON_WXOBJECT_THR
 wxURLDataObject *       O_NON_WXOBJECT_THR
 wxCustomDataObject *    O_NON_WXOBJECT_THR

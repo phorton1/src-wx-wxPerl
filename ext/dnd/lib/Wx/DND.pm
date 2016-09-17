@@ -37,6 +37,7 @@ package Wx::PlDataObjectSimple; @ISA = qw(Wx::DataObjectSimple);
 package Wx::DataObjectComposite;@ISA = qw(Wx::DataObject);
 package Wx::FileDataObject;     @ISA = qw(Wx::DataObjectSimple);
 package Wx::TextDataObject;     @ISA = qw(Wx::DataObjectSimple);
+package Wx::HTMLDataObject;     @ISA = qw(Wx::DataObjectSimple);
 package Wx::BitmapDataObject;   @ISA = qw(Wx::DataObjectSimple);
 
 package Wx::PlDropTarget;       @ISA = qw(Wx::DropTarget);
@@ -52,7 +53,7 @@ use strict;
 
 package Wx;
 
-use vars qw($_df_invalid $_df_bitmap $_df_text $_df_unicodetext $_df_metafile $_df_filename);
+use vars qw($_df_invalid $_df_bitmap $_df_text $_df_html $_df_unicodetext $_df_metafile $_df_filename);
 
 # !parser: sub { $_[0] =~ m/^\s*\#\s*sub\s+(wx\w+)/ }
 # !package: Wx
@@ -60,6 +61,7 @@ use vars qw($_df_invalid $_df_bitmap $_df_text $_df_unicodetext $_df_metafile $_
 
 # sub wxDF_INVALID
 # sub wxDF_TEXT
+# sub wxDF_HTML
 # sub wxDF_UNICODETEXT
 # sub wxDF_BITMAP
 # sub wxDF_METAFILE

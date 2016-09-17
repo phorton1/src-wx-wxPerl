@@ -42,10 +42,20 @@ INCLUDE: XS/DropTarget.xs
 
 MODULE=Wx__DND PACKAGE=Wx
 
+## PRH
+
+wxDataFormat*
+wxDF_HTML()
+  CODE:
+    RETVAL = new wxDataFormat( wxDF_HTML );
+  OUTPUT: RETVAL
+  
+  
+
 wxDataFormat*
 wxDF_TEXT()
   CODE:
-    RETVAL = new wxDataFormat( wxDF_TEXT );
+    RETVAL = new wxDataFormat(  );
   OUTPUT: RETVAL
   
 wxDataFormat*

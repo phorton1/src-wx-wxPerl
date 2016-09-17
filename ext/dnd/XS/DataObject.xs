@@ -281,6 +281,26 @@ void
 wxTextDataObject::SetText( text )
     wxString text
 
+
+
+MODULE=Wx PACKAGE=Wx::HTMLDataObject
+
+wxHTMLDataObject*
+wxHTMLDataObject::new( html = wxEmptyString )
+    wxString html
+
+size_t
+wxHTMLDataObject::GetDataSize()
+
+wxString
+wxHTMLDataObject::GetHTML()
+
+void
+wxHTMLDataObject::SetHTML( html )
+    wxString html
+
+
+
 MODULE=Wx PACKAGE=Wx::BitmapDataObject
 
 #if WXPERL_W_VERSION_GE( 2, 5, 1 ) || !defined(__WXMOTIF__)
