@@ -420,6 +420,11 @@ wxTreeCtrl::GetItemImage( item, which = wxTreeItemIcon_Normal )
     wxTreeItemIcon which
   C_ARGS: *item, which
 
+int
+wxTreeCtrl::GetItemState( item )
+    wxTreeItemId* item
+  C_ARGS: *item
+
 wxString
 wxTreeCtrl::GetItemText( item )
     wxTreeItemId* item
@@ -796,6 +801,12 @@ wxTreeCtrl::SetItemImage( item, image, which = wxTreeItemIcon_Normal )
     int image
     wxTreeItemIcon which
   C_ARGS: *item, image, which
+
+void
+wxTreeCtrl::SetItemState( item, state )
+    wxTreeItemId* item
+    int state
+  C_ARGS: *item, state
 
 void
 wxTreeCtrl::SetItemText( item, text )
